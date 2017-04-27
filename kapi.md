@@ -5,6 +5,51 @@ HOST: https://kapi-test.herokuapp.com/api/v1
 
 Kapi是內部開發所使用的.
 
+## 登入 [/login]
+
+### 取得會員 [POST]
+
+登入取得完整會員資料及token
+
++ id: id (string, required) - id為firebase產生的unique id
++ display_name: Alan (string, required) - 顯示名稱
++ photo_url: https://scontent.xx.fbcdn.net/v/xxx.jpg (string, required) - 圖片url
++ email: sXXX@mail.com (string, required) - 信箱
+
++ Request 
+
+    + Headers
+
+            User-Agent: andReMW4K4fyWroid or iReMW4K4fyWos
+            
+    + Body
+
+            {
+                "id":"M8okOL1VC5bHjjqVqYw4P3db1AK2",
+                "display_name":"Alan",
+                "photo_url":"https://scontent.xx.fbcdn.net/v/xxx.jpg",
+                "email":"sXXX@hotmail.com"
+            }
+
++ Response 200 (application/json)
+
+        {
+            "result": true,
+            "data": {
+                "exp": null,
+                "level": null,
+                "created_date": 1492491511,
+                "default_location": "taipei",
+                "photo_url": "https://scontent.xx.fbcdn.net/v/xxx.jpg",
+                "email": "s155472@hotmail.com",
+                "id": "M8okOL1VC5bHjjqVqYw4P3db1AK2",
+                "display_name": "\u4e01\u67cf\u582f",
+                "intro": "is alan"
+            },
+            "token": "eyJleHAiOjE0OTU5NTk4N..."
+        }
+
+
 ## 咖啡店 [/cafes{?limited_time}{?socket}{?standing_desk}{?mrt}{?city}]
 
 ### 查詢 [GET]
