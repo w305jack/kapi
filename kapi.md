@@ -11,10 +11,12 @@ Kapi是內部開發所使用的.
 
 登入取得完整會員資料及token
 
-+ id: id (string, required) - id為firebase產生的unique id
-+ display_name: Alan (string, required) - 顯示名稱
-+ photo_url: https://scontent.xx.fbcdn.net/v/xxx.jpg (string, required) - 圖片url
-+ email: sXXX@mail.com (string, required) - 信箱
++ multipart/form-data
+
+    + id: id (string, required) - id為firebase產生的unique id
+    + display_name: Alan (string, required) - 顯示名稱
+    + photo_url: https://scontent.xx.fbcdn.net/v/xxx.jpg (string, required) - 圖片url
+    + email: sXXX@mail.com (string, required) - 信箱
 
 + Request 
 
@@ -48,6 +50,7 @@ Kapi是內部開發所使用的.
             },
             "token": "eyJleHAiOjE0OTU5NTk4N..."
         }
+
 
 
 ## 咖啡店 [/cafes{?limited_time}{?socket}{?standing_desk}{?mrt}{?city}]
@@ -141,20 +144,22 @@ Kapi是內部開發所使用的.
 
 新增咖啡店資料
 
-+ name:  有間咖啡店 (string, required) - 咖啡店名子
-+ address: 忠孝東路 (string, required) - 咖啡店地址
-+ city: taipei (string, required) - 所在城市
-+ latitude: 23.4828654 (number, required) - 緯度
-+ longitude: 120.4535834 (number, required) - 經度
-+ id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string) - uuid，不填時自動產生
-+ url: www.xxx.com (string) - 官方網站網址
-+ fb_url: www.facebook.com/123456 (string) - Facebook網址
-+ limited_time: 4 (string) - 限制時間 (1:很多,2:很少,3:看狀況,4:沒設定)
-+ socket: 4 (string) - 插座 (1:很多,2:很少,3:看狀況,4:沒設定)
-+ standing_desk: 4 (string) - 站立位 (1:很多,2:很少,3:看狀況,4:沒設定)
-+ mrt: 忠孝敦化 (string) - 捷運站
-+ phone: 23456789 (string) - 電話號碼
-+ created_date: 1415203908 (string) - Timestamp，建立日期，不含小數點部分
++ multipart/form-data
+
+    + name:  有間咖啡店 (string, required) - 咖啡店名子
+    + address: 忠孝東路 (string, required) - 咖啡店地址
+    + city: taipei (string, required) - 所在城市
+    + latitude: 23.4828654 (number, required) - 緯度
+    + longitude: 120.4535834 (number, required) - 經度
+    + id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string) - uuid，不填時自動產生
+    + url: www.xxx.com (string) - 官方網站網址
+    + fb_url: www.facebook.com/123456 (string) - Facebook網址
+    + limited_time: 4 (string) - 限制時間 (1:很多,2:很少,3:看狀況,4:沒設定)
+    + socket: 4 (string) - 插座 (1:很多,2:很少,3:看狀況,4:沒設定)
+    + standing_desk: 4 (string) - 站立位 (1:很多,2:很少,3:看狀況,4:沒設定)
+    + mrt: 忠孝敦化 (string) - 捷運站
+    + phone: 23456789 (string) - 電話號碼
+    + created_date: 1415203908 (string) - Timestamp，建立日期，不含小數點部分
 
 + Request 
 
@@ -197,7 +202,7 @@ Kapi是內部開發所使用的.
                 "url": "",
                 "fb_url": "",
                 "limited_time": 4,
-                "socket": 4,
+                "socket": 4,M
                 "standing_desk": 2,
                 "mrt": "",
                 "city": "taipei",
@@ -211,20 +216,22 @@ Kapi是內部開發所使用的.
 
 更新咖啡店資料
 
-+ id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - id
-+ name:  有間咖啡店 (string) - 咖啡店名子
-+ address: 忠孝東路 (string) - 咖啡店地址
-+ city: taipei (string) - 所在城市
-+ latitude: 23.4828654 (number) - 緯度
-+ longitude: 120.4535834 (number) - 經度
-+ url: www.xxx.com (string) - 官方網站網址
-+ fb_url: www.facebook.com/123456 (string) - Facebook網址
-+ limited_time: 4 (string) - 限制時間 (1:很多,2:很少,3:看狀況,4:沒設定)
-+ socket: 4 (string) - 插座 (1:很多,2:很少,3:看狀況,4:沒設定)
-+ standing_desk: 4 (string) - 站立位 (1:很多,2:很少,3:看狀況,4:沒設定)
-+ mrt: 忠孝敦化 (string) - 捷運站
-+ phone: 23456789 (string) - 電話號碼
-+ created_date: 1415203908 (string) - Timestamp，建立日期，不含小數點
++ multipart/form-data
+
+    + id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - id
+    + name:  有間咖啡店 (string) - 咖啡店名子
+    + address: 忠孝東路 (string) - 咖啡店地址
+    + city: taipei (string) - 所在城市
+    + latitude: 23.4828654 (number) - 緯度
+    + longitude: 120.4535834 (number) - 經度
+    + url: www.xxx.com (string) - 官方網站網址
+    + fb_url: www.facebook.com/123456 (string) - Facebook網址
+    + limited_time: 4 (string) - 限制時間 (1:很多,2:很少,3:看狀況,4:沒設定)
+    + socket: 4 (string) - 插座 (1:很多,2:很少,3:看狀況,4:沒設定)
+    + standing_desk: 4 (string) - 站立位 (1:很多,2:很少,3:看狀況,4:沒設定)
+    + mrt: 忠孝敦化 (string) - 捷運站
+    + phone: 23456789 (string) - 電話號碼
+    + created_date: 1415203908 (string) - Timestamp，建立日期，不含小數點
 
 + Request
     
@@ -323,14 +330,16 @@ Kapi是內部開發所使用的.
 
 修改會員資料
 
-+ id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — id為firebase產生的unique id
-+ display_name: 無名氏 (string) — 顯示名稱
-+ photo_url: https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/xxxxxx.jpg (string) — 圖片url
-+ email: xxx@hotmail.com (string) — 信箱
-+ default_location: taipei (string) — 預設地區
-+ intro: 我是kapi的忠實... — 介紹
-+ level: 5 (string) — 等級
-+ exp: 10 (string) — 經驗
++ multipart/form-data
+
+    + id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — id為firebase產生的unique id
+    + display_name: 無名氏 (string) — 顯示名稱
+    + photo_url: https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/xxxxxx.jpg (string) — 圖片url
+    + email: xxx@hotmail.com (string) — 信箱
+    + default_location: taipei (string) — 預設地區
+    + intro: 我是kapi的忠實... — 介紹
+    + level: 5 (string) — 等級
+    + exp: 10 (string) — 經驗
 
 + Request 
 
@@ -405,8 +414,10 @@ Kapi是內部開發所使用的.
 
 新增最愛資料
 
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
++ multipart/form-data
+
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
 
 + Request 
 
@@ -434,8 +445,10 @@ Kapi是內部開發所使用的.
 
 刪除最愛資料
 
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
++ multipart/form-data
+
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
 
 + Request 
 
@@ -496,8 +509,10 @@ Kapi是內部開發所使用的.
 
 新增到訪資料
 
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
++ multipart/form-data
+
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
 
 + Request 
 
@@ -525,8 +540,10 @@ Kapi是內部開發所使用的.
 
 刪除到訪資料
 
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
++ multipart/form-data
+
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
 
 + Request 
 
@@ -626,12 +643,16 @@ Kapi是內部開發所使用的.
 
 新增標籤資料
 
-+ tag_name: 復古風 (string, required)
++ multipart/form-data
+
+    + tag_name: 復古風 (string, required)
 
 新增咖啡店的標籤
 
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
-+ tag_id: 76f21fa3-88ad-4d69-976c-53d769af978f (string, required) - 標籤id
++ multipart/form-data
+
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) — 咖啡店id
+    + tag_id: 76f21fa3-88ad-4d69-976c-53d769af978f (string, required) - 標籤id
 
 + Request 
 
@@ -717,8 +738,11 @@ Kapi是內部開發所使用的.
 
 新增營業時間資料
 
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
-+ hours: {"sun_1_open":"11:30", ...} (dict, required) - 營業時間
+
++ application/json
+
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
+    + hours: {"sun_1_open":"11:30", ...} (dict, required) - 營業時間
 
 + Request 
 
@@ -777,8 +801,10 @@ Kapi是內部開發所使用的.
 
 更新營業時間資料
 
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
-+ hours: {"sun_1_open":"11:30", ...} (dict, required) - 營業時間
++ application/json
+
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
+    + hours: {"sun_1_open":"11:30", ...} (dict, required) - 營業時間
 
 + Request
     
@@ -885,9 +911,18 @@ Kapi是內部開發所使用的.
 
 新增評分資料
 
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
-+ id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string, optional) - uuid，不填時自動產生
++ multipart/form-data
+
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
+    + id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string, optional) - uuid，不填時自動產生
+    + food: 3 (string, optional) - 餐點
+    + wifi: 3 (string, optional) - wifi
+    + seat: 3 (string, optional) - 座位
+    + quiet: 3 (string, optional) - 安靜
+    + tasty: 3 (string, optional) - 咖啡品質
+    + cheap: 3 (string, optional) - 環境
+    + music: 3 (string, optional) - 價格
 
 + Request 
 
@@ -933,7 +968,16 @@ Kapi是內部開發所使用的.
 
 更新評分資料
 
-+ id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string, optional) - 評分id
++ multipart/form-data
+
+    + id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string, required) - 評分id
+    + food: 3 (string, optional) - 餐點
+    + wifi: 3 (string, optional) - wifi
+    + seat: 3 (string, optional) - 座位
+    + quiet: 3 (string, optional) - 安靜
+    + tasty: 3 (string, optional) - 咖啡品質
+    + cheap: 3 (string, optional) - 環境
+    + music: 3 (string, optional) - 價格
 
 + Request
     
@@ -978,10 +1022,12 @@ Kapi是內部開發所使用的.
 
 更新喜歡資料
 
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) - 會員id
-+ comment_id: 4c86050e-616b-4adb-a16d-e3f85cd6c9a6 (string, required) - 留言id
-+ like: true/false (boolean, required) - 是否喜歡
-+ id: 99739b6c-2994-4fc4-88b8-a9788e0cfe5b (string) - uuid，不填時自動產生
++ multipart/form-data
+
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) - 會員id
+    + comment_id: 4c86050e-616b-4adb-a16d-e3f85cd6c9a6 (string, required) - 留言id
+    + like: true/false (boolean, required) - 是否喜歡
+    + id: 99739b6c-2994-4fc4-88b8-a9788e0cfe5b (string) - uuid，不填時自動產生
 
 + Request
     
@@ -1062,12 +1108,14 @@ Kapi是內部開發所使用的.
 
 新增留言資料
 
-+ cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
-+ member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
-+ id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string) - uuid，不填時自動產生
-+ review_id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string) - uuid，不填時自動產生
-+ comment: 這是留言內容 (string) - 留言內容
-+ date: 1492518436 (string) Timestamp，建立日期，不含小數點部分，不填時自動產生
++ multipart/form-data
+
+    + cafe_id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string, required) - 咖啡店id
+    + member_id: M8okOL1VC5bHjjqVqYw4P3db1AK2 (string, required) — 會員id為firebase產生的unique id
+    + id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string) - uuid，不填時自動產生
+    + review_id: 8ac378a5-c9d3-41f2-9054-0619fcca63f7 (string) - uuid，不填時自動產生
+    + comment: 這是留言內容 (string) - 留言內容
+    + date: 1492518436 (string) Timestamp，建立日期，不含小數點部分，不填時自動產生
 
 + Request 
 
