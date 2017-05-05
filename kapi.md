@@ -154,9 +154,9 @@ Kapi是內部開發所使用的.
     + id: 4a24c511-d78f-4814-84c0-1ff0e4feb890 (string) - uuid，不填時自動產生
     + url: www.xxx.com (string) - 官方網站網址
     + fb_url: www.facebook.com/123456 (string) - Facebook網址
-    + limited_time: 4 (string) - 限制時間 (1:有限時,2:不限時,3:看狀況,4:沒設定)
-    + socket: 4 (string) - 插座 (1:很多,2:很少,3:看座位,4:沒設定)
-    + standing_desk: 4 (string) - 站立位 (1:有些座位可以,2:無法,4:沒設定)
+    + limited_time: 4 (string) - 限制時間 (1:有限時,2:不限時,3:看狀況,4:沒設定)
+    + socket: 4 (string) - 插座 (1:很多,2:很少,3:看座位,4:沒設定)
+    + standing_desk: 4 (string) - 站立位 (1:有些座位可以,2:無法,4:沒設定)
     + mrt: 忠孝敦化 (string) - 捷運站
     + phone: 23456789 (string) - 電話號碼
     + created_date: 1415203908 (string) - Timestamp，建立日期，不含小數點部分
